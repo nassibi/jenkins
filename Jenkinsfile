@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                docker {
-                    image 'node:18-alpine'
+                podman {
+                    image 'node:23-alpine'
                     reuseNode true
                 }
             }
